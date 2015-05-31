@@ -1,5 +1,8 @@
 package betahouse.santoshkumar.moneymanager.CMainScreen;
 
+import android.app.ActionBar;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -17,6 +20,14 @@ public class CMainScreen extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        android.support.v7.app.ActionBar ActionBar =getSupportActionBar();
+
+        ActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        ActionBar.setCustomView(R.layout.actionbar_layout);
+
+        ActionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00b0f0")));
+
+
         setContentView(R.layout.mainscreen_layout);
     }
 
